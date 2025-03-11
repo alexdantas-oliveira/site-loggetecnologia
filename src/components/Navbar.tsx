@@ -25,9 +25,11 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-logge-dark-blue">
-              <span className="text-logge-light-blue">Logge</span> Tecnologia
-            </h1>
+            <img 
+              src="/lovable-uploads/ffa1e4c2-1baa-48a7-9ec7-58e3cc87a43f.png" 
+              alt="Logge Tecnologia Logo" 
+              className="h-12 mr-2" 
+            />
           </a>
         </div>
 

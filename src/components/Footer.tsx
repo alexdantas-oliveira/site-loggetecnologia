@@ -16,9 +16,13 @@ const Footer = () => {
       <div className="container mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-xl font-bold mb-6">
-              <span className="text-logge-light-blue">Logge</span> Tecnologia
-            </h3>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/ffa1e4c2-1baa-48a7-9ec7-58e3cc87a43f.png" 
+                alt="Logge Tecnologia Logo" 
+                className="h-16 mb-4" 
+              />
+            </div>
             <p className="text-gray-300 mb-6">
               Transformando desafios em soluções inovadoras e eficientes para empresas e governos.
             </p>
