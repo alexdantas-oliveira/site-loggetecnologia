@@ -4,10 +4,10 @@ import {
   BarChart2, 
   Clock, 
   FileQuestion, 
-  PuzzlePiece, 
+  Puzzle, 
   ShieldCheck, 
   Lightbulb, 
-  Check 
+  ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -37,7 +37,7 @@ const Solutions = () => {
 
   const solutions = [
     {
-      icon: <PuzzlePiece className="h-10 w-10 text-logge-light-blue" />,
+      icon: <Puzzle className="h-10 w-10 text-logge-light-blue" />,
       title: "Soluções Personalizadas",
       description: "Desenvolvemos estratégias e sistemas adaptados às necessidades específicas de cada cliente."
     },
