@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Logge Tecnologia custom colors
+				logge: {
+					'light-blue': '#1EAEDB',
+					'dark-blue': '#0E76A8',
+					'gray-100': '#F6F6F7',
+					'gray-200': '#C8C8C9',
+					'gray-300': '#8A898C',
+					'gray-400': '#403E43',
 				}
+			},
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
