@@ -188,14 +188,6 @@ const ContactForm = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="mt-10">
-                <h4 className="font-bold text-logge-dark-blue mb-4">Horário de Atendimento</h4>
-                <p className="text-logge-gray-300">
-                  Segunda a Sexta: 9h às 18h<br />
-                  Sábados: 9h às 13h
-                </p>
-              </div>
             </div>
           </div>
         </div>
