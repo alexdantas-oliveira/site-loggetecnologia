@@ -21,28 +21,28 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 ${isScrolled ? 'shadow-md py-2' : 'py-4'}`}>
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 shadow-sm ${isScrolled ? 'py-2' : 'py-4'}`}>
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-logge-dark-blue">
+            <h1 className="text-xl md:text-2xl font-bold text-logge-dark-blue">
               <span className="text-logge-light-blue">Logge</span> Tecnologia
             </h1>
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#solucoes" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
+          <a href="#solucoes" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
             Soluções
           </a>
-          <a href="#diferenciais" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors">
+          <a href="#diferenciais" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
             Diferenciais
           </a>
-          <a href="#contato" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors">
+          <a href="#contato" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
             Contato
           </a>
-          <Button className="btn-primary" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button className="btn-primary text-sm lg:text-base" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
             Fale Conosco
           </Button>
         </div>
