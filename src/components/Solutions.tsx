@@ -54,39 +54,49 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solucoes" className="py-20 bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="section-title">Problemas que Resolvemos</h2>
-          <p className="section-subtitle">
+    <section id="solucoes" className="py-12 md:py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-logge-dark-blue">
+            Problemas que Resolvemos
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-logge-gray-300">
             Identificamos e transformamos os principais desafios enfrentados por empresas e órgãos públicos em oportunidades de inovação e crescimento.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16 md:mb-20">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div 
+              key={index} 
+              className="bg-white p-5 sm:p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
               <div className="mb-4">{problem.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-logge-gray-400">{problem.title}</h3>
-              <p className="text-logge-gray-300">{problem.description}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-logge-gray-400">{problem.title}</h3>
+              <p className="text-logge-gray-300 text-sm sm:text-base">{problem.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-logge-gray-100 p-8 md:p-12 rounded-2xl mb-16">
-          <div className="text-center mb-12">
-            <h2 className="section-title">Como Transformamos Desafios em Soluções</h2>
-            <p className="section-subtitle">
+        <div className="bg-logge-gray-100 p-6 sm:p-8 md:p-12 rounded-2xl mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-logge-dark-blue">
+              Como Transformamos Desafios em Soluções
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-logge-gray-300">
               Nossa abordagem combina expertise técnica, conhecimento de negócios e metodologias inovadoras para criar soluções eficazes e sustentáveis.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+              <div 
+                key={index} 
+                className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
+              >
                 <div className="mb-4">{solution.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{solution.title}</h3>
-                <p className="text-logge-gray-300">{solution.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-logge-dark-blue">{solution.title}</h3>
+                <p className="text-logge-gray-300 text-sm sm:text-base">{solution.description}</p>
               </div>
             ))}
           </div>
@@ -94,11 +104,11 @@ const Solutions = () => {
 
         <div className="text-center">
           <Button 
-            className="btn-primary text-lg py-6 px-8" 
+            className="bg-logge-light-blue hover:bg-logge-dark-blue text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-md transition-all duration-300 text-sm sm:text-base"
             onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Quero Conhecer as Soluções para Minha Empresa
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
       </div>
