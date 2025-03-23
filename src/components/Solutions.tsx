@@ -55,7 +55,7 @@ const Solutions = () => {
 
   return (
     <section id="solucoes" className="py-12 md:py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-logge-dark-blue">
             Problemas que Resolvemos
@@ -69,11 +69,11 @@ const Solutions = () => {
           {problems.map((problem, index) => (
             <div 
               key={index} 
-              className="bg-white p-5 sm:p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col"
+              className="bg-white p-5 sm:p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col"
             >
-              <div className="mb-4">{problem.icon}</div>
+              <div className="mb-4 flex justify-center sm:justify-start">{problem.icon}</div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-logge-gray-400">{problem.title}</h3>
-              <p className="text-logge-gray-300 text-sm sm:text-base">{problem.description}</p>
+              <p className="text-logge-gray-300 text-sm sm:text-base flex-grow">{problem.description}</p>
             </div>
           ))}
         </div>
@@ -92,11 +92,11 @@ const Solutions = () => {
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
-                className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="bg-white p-5 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col"
               >
-                <div className="mb-4">{solution.icon}</div>
+                <div className="mb-4 flex justify-center md:justify-start">{solution.icon}</div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-logge-dark-blue">{solution.title}</h3>
-                <p className="text-logge-gray-300 text-sm sm:text-base">{solution.description}</p>
+                <p className="text-logge-gray-300 text-sm sm:text-base flex-grow">{solution.description}</p>
               </div>
             ))}
           </div>
@@ -104,7 +104,7 @@ const Solutions = () => {
 
         <div className="text-center">
           <Button 
-            className="bg-logge-light-blue hover:bg-logge-dark-blue text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-md transition-all duration-300 text-sm sm:text-base"
+            className="bg-logge-light-blue hover:bg-logge-dark-blue text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-md transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
             onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Quero Conhecer as Soluções para Minha Empresa
