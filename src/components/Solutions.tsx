@@ -104,11 +104,11 @@ const Solutions = () => {
 
         <div className="text-center">
           <Button 
-            className="bg-logge-light-blue hover:bg-logge-dark-blue text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-md transition-all duration-300 text-sm sm:text-base w-full sm:w-auto"
+            className="bg-logge-light-blue hover:bg-logge-dark-blue text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-all duration-300 text-sm sm:text-base w-full sm:w-auto inline-flex items-center justify-center gap-2"
             onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Quero Conhecer as Soluções para Minha Empresa
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="text-center whitespace-normal sm:whitespace-nowrap">Quero Conhecer as Soluções para Minha Empresa</span>
+            <ArrowRight className="ml-1 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
           </Button>
         </div>
       </div>
