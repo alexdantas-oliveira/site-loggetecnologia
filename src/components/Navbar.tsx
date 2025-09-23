@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoLogge from "@/assets/logo-logge-tecnologia.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
               <span className="text-logge-light-blue">Logge</span> Tecnologia
             </h1>
             <img 
-              src="/src/assets/logo-logge-tecnologia.png" 
+              src={logoLogge} 
               alt="Logo Logge Tecnologia" 
               className="h-8 md:h-10 w-auto"
             />
