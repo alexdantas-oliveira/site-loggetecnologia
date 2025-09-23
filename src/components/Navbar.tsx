@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 shadow-sm ${isScrolled ? 'py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-1">
             <h1 className="text-xl md:text-2xl font-bold text-logge-dark-blue">
               <span className="text-logge-light-blue">Logge</span> Tecnologia
             </h1>
