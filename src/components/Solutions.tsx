@@ -119,10 +119,10 @@ const Solutions = () => {
 
         <div
           ref={ctaRef}
-          className={`scroll-reveal ${ctaVisible ? 'revealed' : ''} text-center space-y-4`}
+          className={`scroll-reveal ${ctaVisible ? 'revealed' : ''} text-center space-y-4 flex flex-col items-center`}
         >
           <Button 
-            className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 hover:-translate-y-1 text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-all duration-300 text-sm sm:text-base w-full sm:w-auto inline-flex items-center justify-center gap-2 shadow-medium hover:shadow-strong"
+            className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 hover:-translate-y-1 text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-all duration-300 text-sm sm:text-base w-full max-w-md sm:max-w-lg inline-flex items-center justify-center gap-2 shadow-medium hover:shadow-strong"
             onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <span className="text-center whitespace-normal sm:whitespace-nowrap">Quero Conhecer as Soluções para Minha Empresa</span>
@@ -130,7 +130,7 @@ const Solutions = () => {
           </Button>
           
           <Button 
-            className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 hover:-translate-y-1 text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-all duration-300 text-sm sm:text-base w-full sm:w-auto inline-flex items-center justify-center gap-2 shadow-medium hover:shadow-strong"
+            className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 hover:-translate-y-1 text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-md transition-all duration-300 text-sm sm:text-base w-full max-w-md sm:max-w-lg inline-flex items-center justify-center gap-2 shadow-medium hover:shadow-strong"
             onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <span className="text-center whitespace-normal sm:whitespace-nowrap">Quero Conhecer as Soluções para o Meu Município</span>
