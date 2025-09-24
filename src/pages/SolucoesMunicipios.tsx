@@ -45,9 +45,9 @@ const SolucoesMunicipios = () => {
     description: "Soluções tecnológicas completas para modernizar a gestão educacional e melhorar a experiência de ensino-aprendizagem.",
     features: ["Sistema Acadêmico", "Gestão de Matrículas", "Portal do Aluno", "Biblioteca Digital", "Gestão Financeira", "Controle de Frequência", "Relatórios Pedagógicos", "Comunicação Escolar", "Calendário Acadêmico", "Gestão de Recursos"]
   }, {
-    title: "Automação de Serviços Públicos",
-    description: "Automatize atendimento ao cidadão e workflows administrativos para agilizar serviços municipais.",
-    features: ["Atendimento Digital", "Protocolo Eletrônico", "Integração de Sistemas", "Monitoramento 24/7", "Assinatura Digital", "Workflow Automático", "Notificações SMS/Email", "Integração Bancária", "Geolocalização", "Backup Automático"]
+    title: "Logge Saúde",
+    description: "Sistema completo para gestão de unidades de saúde pública com foco na eficiência do atendimento e melhoria dos serviços médicos.",
+    features: ["Prontuário Eletrônico", "Agendamento Online", "Controle de Estoque", "Gestão de Leitos", "Sistema de Farmácia", "Relatórios Epidemiológicos", "Telemedicina", "Fila de Atendimento", "Controle de Vacinas", "Dashboard Médico"]
   }, {
     title: "Business Intelligence Público",
     description: "Transforme dados municipais em insights valiosos com dashboards e análises para gestão pública eficiente.",
