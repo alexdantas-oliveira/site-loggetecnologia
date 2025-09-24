@@ -170,8 +170,8 @@ const ContactForm = () => {
                   <Phone className="h-5 w-5 text-logge-light-blue mr-3 mt-1" />
                   <div>
                     <p className="font-medium text-logge-gray-400 text-sm sm:text-base">Telefone</p>
-                    <a href="tel:+5500000000000" className="text-logge-dark-blue hover:text-logge-light-blue transition-colors text-sm sm:text-base">
-                      +55 (00) 0000-0000
+                    <a href="tel:+5586998056525" className="text-logge-dark-blue hover:text-logge-light-blue transition-colors text-sm sm:text-base">
+                      (86) 99805-6525
                     </a>
                   </div>
                 </div>
