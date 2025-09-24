@@ -42,8 +42,8 @@ const SolucoesEmpresas = () => {
   }];
   const services = [{
     title: "Diagnóstico Organizacional",
-    description: "ERP personalizado para controle completo de processos, estoque, financeiro e recursos humanos.",
-    features: ["Controle de Estoque", "Gestão Financeira", "RH Digital", "Relatórios Avançados"]
+    description: "Análise completa dos processos, estrutura e desempenho organizacional para identificar oportunidades de melhoria e crescimento.",
+    features: ["Análise de Processos", "Mapeamento Organizacional", "Avaliação de Performance", "Relatórios Estratégicos"]
   }, {
     title: "Automação de Processos",
     description: "Automatize tarefas repetitivas e workflows complexos para economizar tempo e reduzir erros.",
