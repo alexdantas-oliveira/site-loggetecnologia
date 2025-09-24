@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail } from "lucide-react";
+import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail, GraduationCap, Heart, HandHeart, Vote } from "lucide-react";
 const SolucoesMunicipios = () => {
   const [email, setEmail] = useState('');
   const {
@@ -43,18 +43,22 @@ const SolucoesMunicipios = () => {
   const services = [{
     title: "Logge Educação",
     description: "Soluções tecnológicas completas para modernizar a gestão educacional e melhorar a experiência de ensino-aprendizagem.",
+    icon: <GraduationCap className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Sistema Acadêmico", "Gestão de Matrículas", "Portal do Aluno", "Biblioteca Digital", "Gestão Financeira", "Controle de Frequência", "Relatórios Pedagógicos", "Comunicação Escolar", "Calendário Acadêmico", "Gestão de Recursos"]
   }, {
     title: "Logge Saúde",
     description: "Sistema completo para gestão de unidades de saúde pública com foco na eficiência do atendimento e melhoria dos serviços médicos.",
+    icon: <Heart className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Prontuário Eletrônico", "Agendamento Online", "Controle de Estoque", "Gestão de Leitos", "Sistema de Farmácia", "Relatórios Epidemiológicos", "Telemedicina", "Fila de Atendimento", "Controle de Vacinas", "Dashboard Médico"]
   }, {
     title: "Logge Assistência Social",
     description: "Plataforma integrada para gestão completa dos programas sociais e atendimento à população em vulnerabilidade social.",
+    icon: <HandHeart className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Cadastro Único", "Gestão de Benefícios", "Acompanhamento Familiar", "Controle de Programas", "Relatórios Sociais", "Agenda de Atendimentos", "Monitoramento SUAS", "Gestão de Recursos", "Portal do Beneficiário", "Indicadores Sociais"]
   }, {
     title: "Logge Orçamento Participativo - OPA",
     description: "Plataforma digital completa para implementação do orçamento participativo, promovendo transparência e participação cidadã na gestão pública.",
+    icon: <Vote className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Portal de Votação", "Cadastro de Propostas", "Mapeamento de Demandas", "Dashboard Transparência", "Gestão de Assembleias", "Sistema de Ranking", "Relatórios Participativos", "Notificações Cidadãos", "Controle de Execução", "Analytics Participação"]
   }];
   const handleEmailSubmit = (e: React.FormEvent) => {
@@ -127,7 +131,7 @@ const SolucoesMunicipios = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${servicesVisible ? 'revealed' : ''} bg-white p-6 rounded-lg shadow-soft border border-gray-100 card-hover h-full flex flex-col`}>
                   <div className="mb-4">
-                    <Users className="h-12 w-12 text-logge-light-blue mb-4" />
+                    {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{service.title}</h3>
                   <p className="text-logge-gray-300 mb-4 flex-grow">{service.description}</p>
