@@ -75,7 +75,7 @@ const SolucoesMunicipios = () => {
         <section ref={heroRef} className={`scroll-reveal ${heroVisible ? 'revealed' : ''} pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-logge-light-blue to-logge-dark-blue text-white`}>
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Soluções Tecnológicas para <span className="text-white/90">Seu Município</span>
+              Soluções Tecnológicas para <span className="text-white/90">Governos</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white/90">
               Modernize a gestão pública com soluções tecnológicas que promovem eficiência, transparência e aproximam o governo dos cidadãos.
