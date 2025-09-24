@@ -58,7 +58,7 @@ const SolucoesMunicipios = () => {
   }, {
     title: "Logge Orçamento Participativo - OPA",
     description: "Plataforma digital completa para implementação do orçamento participativo, promovendo transparência e participação cidadã na gestão pública.",
-    icon: <Vote className="h-12 w-12 text-logge-light-blue mb-4" />,
+    icon: <Users className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Portal de Votação", "Cadastro de Propostas", "Mapeamento de Demandas", "Dashboard Transparência", "Gestão de Assembleias", "Sistema de Ranking", "Relatórios Participativos", "Notificações Cidadãos", "Controle de Execução", "Analytics Participação"]
   }];
   const handleEmailSubmit = (e: React.FormEvent) => {
