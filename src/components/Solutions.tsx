@@ -54,8 +54,8 @@ const Solutions = () => {
     },
     {
       icon: <Lightbulb className="h-10 w-10 text-logge-light-blue" />,
-      title: "Inovação Tecnológica",
-      description: "Aplicamos as mais recentes tecnologias e metodologias para manter sua empresa na vanguarda."
+      title: "Organização e Estruturação",
+      description: "Organizamos e estruturamos seus processos e dados de forma eficiente para otimizar a produtividade e tomada de decisões."
     }
   ];
 
