@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail } from "lucide-react";
+import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail, Search, Cog, BarChart3, Code } from "lucide-react";
 const SolucoesEmpresas = () => {
   const [email, setEmail] = useState('');
   const {
@@ -43,19 +43,23 @@ const SolucoesEmpresas = () => {
   const services = [{
     title: "Diagnóstico Organizacional",
     description: "Análise completa dos processos, estrutura e desempenho organizacional para identificar oportunidades de melhoria e crescimento.",
-    features: ["Análise de Processos", "Mapeamento Organizacional", "Avaliação de Performance", "Relatórios Estratégicos"]
+    features: ["Análise de Processos", "Mapeamento Organizacional", "Avaliação de Performance", "Relatórios Estratégicos"],
+    icon: <Search className="h-12 w-12 text-logge-light-blue mb-4" />
   }, {
     title: "Automação de Processos",
     description: "Automatize tarefas repetitivas e workflows complexos para economizar tempo e reduzir erros.",
-    features: ["Workflows Automatizados", "Integração de Sistemas", "APIs Customizadas", "Monitoramento 24/7"]
+    features: ["Workflows Automatizados", "Integração de Sistemas", "APIs Customizadas", "Monitoramento 24/7"],
+    icon: <Cog className="h-12 w-12 text-logge-light-blue mb-4" />
   }, {
     title: "Business Intelligence",
     description: "Transforme dados em insights valiosos com dashboards interativos e análises preditivas.",
-    features: ["Dashboards Personalizados", "Análise Preditiva", "KPIs em Tempo Real", "Relatórios Executivos"]
+    features: ["Dashboards Personalizados", "Análise Preditiva", "KPIs em Tempo Real", "Relatórios Executivos"],
+    icon: <BarChart3 className="h-12 w-12 text-logge-light-blue mb-4" />
   }, {
     title: "Desenvolvimento de Aplicativos",
     description: "Aplicações web e mobile sob medida para atender as necessidades específicas do seu negócio.",
-    features: ["Apps Mobile", "Sistemas Web", "Integração Cloud", "UX/UI Profissional"]
+    features: ["Apps Mobile", "Sistemas Web", "Integração Cloud", "UX/UI Profissional"],
+    icon: <Code className="h-12 w-12 text-logge-light-blue mb-4" />
   }];
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -127,7 +131,7 @@ const SolucoesEmpresas = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${servicesVisible ? 'revealed' : ''} bg-white p-6 rounded-lg shadow-soft border border-gray-100 card-hover h-full flex flex-col`}>
                   <div className="mb-4">
-                    <Users className="h-12 w-12 text-logge-light-blue mb-4" />
+                    {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{service.title}</h3>
                   <p className="text-logge-gray-300 mb-4 flex-grow">{service.description}</p>
