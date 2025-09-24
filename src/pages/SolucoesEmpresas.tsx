@@ -41,7 +41,7 @@ const SolucoesEmpresas = () => {
     description: "Implemente soluções escaláveis que crescem junto com sua empresa, garantindo investimento de longo prazo."
   }];
   const services = [{
-    title: "Sistemas de Gestão Empresarial",
+    title: "Diagnóstico Organizacional",
     description: "ERP personalizado para controle completo de processos, estoque, financeiro e recursos humanos.",
     features: ["Controle de Estoque", "Gestão Financeira", "RH Digital", "Relatórios Avançados"]
   }, {
