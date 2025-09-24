@@ -53,9 +53,9 @@ const SolucoesMunicipios = () => {
     description: "Plataforma integrada para gestão completa dos programas sociais e atendimento à população em vulnerabilidade social.",
     features: ["Cadastro Único", "Gestão de Benefícios", "Acompanhamento Familiar", "Controle de Programas", "Relatórios Sociais", "Agenda de Atendimentos", "Monitoramento SUAS", "Gestão de Recursos", "Portal do Beneficiário", "Indicadores Sociais"]
   }, {
-    title: "Portais e Aplicativos Cidadão",
-    description: "Plataformas web e mobile para aproximar governo e população, facilitando acesso a serviços públicos.",
-    features: ["Portal do Cidadão", "App Municipal", "Ouvidoria Digital", "Serviços Online", "Consulta de Débitos", "Agendamento Online", "Chat Bot Inteligente", "Push Notifications", "Mapa de Serviços", "Avaliação de Serviços"]
+    title: "Logge Orçamento Participativo - OPA",
+    description: "Plataforma digital completa para implementação do orçamento participativo, promovendo transparência e participação cidadã na gestão pública.",
+    features: ["Portal de Votação", "Cadastro de Propostas", "Mapeamento de Demandas", "Dashboard Transparência", "Gestão de Assembleias", "Sistema de Ranking", "Relatórios Participativos", "Notificações Cidadãos", "Controle de Execução", "Analytics Participação"]
   }];
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
