@@ -49,9 +49,9 @@ const SolucoesMunicipios = () => {
     description: "Sistema completo para gestão de unidades de saúde pública com foco na eficiência do atendimento e melhoria dos serviços médicos.",
     features: ["Prontuário Eletrônico", "Agendamento Online", "Controle de Estoque", "Gestão de Leitos", "Sistema de Farmácia", "Relatórios Epidemiológicos", "Telemedicina", "Fila de Atendimento", "Controle de Vacinas", "Dashboard Médico"]
   }, {
-    title: "Business Intelligence Público",
-    description: "Transforme dados municipais em insights valiosos com dashboards e análises para gestão pública eficiente.",
-    features: ["Dashboards Municipais", "Indicadores de Gestão", "Relatórios Gerenciais", "Análise de Performance", "Previsão Orçamentária", "Métricas de Eficiência", "Análise Comparativa", "Machine Learning", "Alertas Inteligentes", "Exportação de Dados"]
+    title: "Logge Assistência Social",
+    description: "Plataforma integrada para gestão completa dos programas sociais e atendimento à população em vulnerabilidade social.",
+    features: ["Cadastro Único", "Gestão de Benefícios", "Acompanhamento Familiar", "Controle de Programas", "Relatórios Sociais", "Agenda de Atendimentos", "Monitoramento SUAS", "Gestão de Recursos", "Portal do Beneficiário", "Indicadores Sociais"]
   }, {
     title: "Portais e Aplicativos Cidadão",
     description: "Plataformas web e mobile para aproximar governo e população, facilitando acesso a serviços públicos.",
