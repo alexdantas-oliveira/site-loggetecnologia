@@ -181,9 +181,9 @@ const ContactForm = () => {
                   <div>
                     <p className="font-medium text-logge-gray-400 text-sm sm:text-base">Endereço</p>
                     <p className="text-logge-gray-300 text-sm sm:text-base">
-                      Av. Tecnologia, 1000<br />
-                      Centro Empresarial, Sala 101<br />
-                      São Paulo - SP
+                      Rua David Caldas, 1392<br />
+                      Bairro Vermelha, Centro Sul<br />
+                      Teresina - PI
                     </p>
                   </div>
                 </div>
