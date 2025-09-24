@@ -110,9 +110,7 @@ const SolucoesEmpresas = () => {
         </section>
 
         {/* CTA Section */}
-        <section ref={ctaRef} className="py-12 md:py-16 bg-logge-gray-100">
-          
-        </section>
+        
 
         {/* Services Grid Section */}
         <section ref={servicesRef} className="py-12 md:py-20 bg-white">
