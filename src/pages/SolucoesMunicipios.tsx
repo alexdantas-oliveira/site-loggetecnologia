@@ -43,19 +43,19 @@ const SolucoesMunicipios = () => {
   const services = [{
     title: "Sistemas de Gestão Municipal",
     description: "Plataforma integrada para controle de processos administrativos, financeiro, recursos humanos e serviços públicos.",
-    features: ["Gestão de Processos", "Controle Orçamentário", "RH Público", "Portal da Transparência", "Gestão de Patrimônio", "Controle de Licitações", "Planejamento Estratégico"]
+    features: ["Gestão de Processos", "Controle Orçamentário", "RH Público", "Portal da Transparência", "Gestão de Patrimônio", "Controle de Licitações", "Planejamento Estratégico", "Gestão Tributária", "Controle de Frotas", "Gestão de Obras"]
   }, {
     title: "Automação de Serviços Públicos",
     description: "Automatize atendimento ao cidadão e workflows administrativos para agilizar serviços municipais.",
-    features: ["Atendimento Digital", "Protocolo Eletrônico", "Integração de Sistemas", "Monitoramento 24/7", "Assinatura Digital", "Workflow Automático", "Notificações SMS/Email"]
+    features: ["Atendimento Digital", "Protocolo Eletrônico", "Integração de Sistemas", "Monitoramento 24/7", "Assinatura Digital", "Workflow Automático", "Notificações SMS/Email", "Integração Bancária", "Geolocalização", "Backup Automático"]
   }, {
     title: "Business Intelligence Público",
     description: "Transforme dados municipais em insights valiosos com dashboards e análises para gestão pública eficiente.",
-    features: ["Dashboards Municipais", "Indicadores de Gestão", "Relatórios Gerenciais", "Análise de Performance", "Previsão Orçamentária", "Métricas de Eficiência", "Análise Comparativa"]
+    features: ["Dashboards Municipais", "Indicadores de Gestão", "Relatórios Gerenciais", "Análise de Performance", "Previsão Orçamentária", "Métricas de Eficiência", "Análise Comparativa", "Machine Learning", "Alertas Inteligentes", "Exportação de Dados"]
   }, {
     title: "Portais e Aplicativos Cidadão",
     description: "Plataformas web e mobile para aproximar governo e população, facilitando acesso a serviços públicos.",
-    features: ["Portal do Cidadão", "App Municipal", "Ouvidoria Digital", "Serviços Online", "Consulta de Débitos", "Agendamento Online", "Chat Bot Inteligente"]
+    features: ["Portal do Cidadão", "App Municipal", "Ouvidoria Digital", "Serviços Online", "Consulta de Débitos", "Agendamento Online", "Chat Bot Inteligente", "Push Notifications", "Mapa de Serviços", "Avaliação de Serviços"]
   }];
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
