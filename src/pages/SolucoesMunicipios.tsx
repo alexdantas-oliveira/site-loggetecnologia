@@ -131,7 +131,7 @@ const SolucoesMunicipios = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{service.title}</h3>
                   <p className="text-logge-gray-300 mb-4 flex-grow">{service.description}</p>
-                  <div className="space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm text-logge-gray-400">
                         <CheckCircle className="h-4 w-4 text-logge-light-blue mr-2 flex-shrink-0" />
                         {feature}
