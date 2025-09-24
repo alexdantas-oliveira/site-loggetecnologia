@@ -41,9 +41,9 @@ const SolucoesMunicipios = () => {
     description: "Implemente soluções que promovem transparência pública e modernizam os serviços oferecidos aos cidadãos."
   }];
   const services = [{
-    title: "Sistemas de Gestão Municipal",
-    description: "Plataforma integrada para controle de processos administrativos, financeiro, recursos humanos e serviços públicos.",
-    features: ["Gestão de Processos", "Controle Orçamentário", "RH Público", "Portal da Transparência", "Gestão de Patrimônio", "Controle de Licitações", "Planejamento Estratégico", "Gestão Tributária", "Controle de Frotas", "Gestão de Obras"]
+    title: "Logge Educação",
+    description: "Soluções tecnológicas completas para modernizar a gestão educacional e melhorar a experiência de ensino-aprendizagem.",
+    features: ["Sistema Acadêmico", "Gestão de Matrículas", "Portal do Aluno", "Biblioteca Digital", "Gestão Financeira", "Controle de Frequência", "Relatórios Pedagógicos", "Comunicação Escolar", "Calendário Acadêmico", "Gestão de Recursos"]
   }, {
     title: "Automação de Serviços Públicos",
     description: "Automatize atendimento ao cidadão e workflows administrativos para agilizar serviços municipais.",
