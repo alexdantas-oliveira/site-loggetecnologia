@@ -81,9 +81,7 @@ const ContactForm = () => {
                   <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="(00) 00000-0000" className="w-full" />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-logge-gray-400 mb-1 sm:mb-2">
-                    Empresa
-                  </label>
+                  <label htmlFor="company" className="block text-sm font-medium text-logge-gray-400 mb-1 sm:mb-2">Empresa/Município</label>
                   <Input id="company" name="company" value={formData.company} onChange={handleChange} placeholder="Nome da sua empresa" className="w-full" />
                 </div>
               </div>
