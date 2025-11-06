@@ -44,18 +44,15 @@ const Solutions = () => {
   const solutions = [
     {
       icon: <Puzzle className="h-10 w-10 text-logge-light-blue" />,
-      title: "Soluções Personalizadas",
-      description: "Desenvolvemos estratégias e sistemas adaptados às necessidades específicas de cada cliente."
+      title: "Soluções para a Minha Empresa",
+      description: "Transforme sua empresa com soluções tecnológicas personalizadas que otimizam processos, aumentam a produtividade e impulsionam o crescimento do seu negócio.",
+      link: "/solucoes-empresas"
     },
     {
       icon: <ShieldCheck className="h-10 w-10 text-logge-light-blue" />,
-      title: "Segurança e Confiabilidade",
-      description: "Implementamos tecnologias seguras e robustas que garantem proteção aos seus dados e operações."
-    },
-    {
-      icon: <Lightbulb className="h-10 w-10 text-logge-light-blue" />,
-      title: "Organização e Estruturação",
-      description: "Organizamos e estruturamos seus processos e dados de forma eficiente para otimizar a produtividade e tomada de decisões."
+      title: "Soluções para o Meu Município",
+      description: "Modernize a gestão pública com tecnologia que melhora os serviços aos cidadãos, aumenta a transparência e otimiza os recursos municipais.",
+      link: "/solucoes-municipios"
     }
   ];
 
@@ -103,15 +100,19 @@ const Solutions = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
-                className={`scroll-reveal scroll-reveal-stagger ${solutionsVisible ? 'revealed' : ''} bg-white p-5 sm:p-6 rounded-lg shadow-soft card-hover-subtle h-full flex flex-col`}
+                className={`scroll-reveal scroll-reveal-stagger ${solutionsVisible ? 'revealed' : ''} bg-white p-6 sm:p-8 rounded-lg shadow-soft card-hover-subtle h-full flex flex-col cursor-pointer group`}
+                onClick={() => window.location.href = solution.link}
               >
-                <div className="mb-4 flex justify-center md:justify-start transition-transform duration-300 hover:scale-110">{solution.icon}</div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-logge-dark-blue">{solution.title}</h3>
+                <div className="mb-4 flex justify-center md:justify-start transition-transform duration-300 group-hover:scale-110">{solution.icon}</div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-logge-dark-blue group-hover:text-logge-light-blue transition-colors">{solution.title}</h3>
                 <p className="text-logge-gray-300 text-sm sm:text-base flex-grow">{solution.description}</p>
+                <div className="mt-4 flex items-center text-logge-light-blue font-semibold group-hover:translate-x-2 transition-transform">
+                  Saiba mais <ArrowRight className="ml-2 h-5 w-5" />
+                </div>
               </div>
             ))}
           </div>
