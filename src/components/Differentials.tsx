@@ -47,9 +47,7 @@ const Differentials = () => {
       <div className="container mx-auto">
         <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-16`}>
           <h2 className="section-title">Nossos Diferenciais</h2>
-          <p className="section-subtitle">
-            O que nos torna a escolha certa para transformar os desafios da sua empresa em soluções inovadoras e eficientes.
-          </p>
+          <p className="section-subtitle">O que nos torna a escolha certa para transformar os desafios da sua empresa ou município em soluções inovadoras e eficientes.</p>
         </div>
 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
