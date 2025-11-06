@@ -46,7 +46,7 @@ const Solutions = () => {
     description: "Modernize a gestão pública com tecnologia que melhora os serviços aos cidadãos, aumenta a transparência e otimiza os recursos municipais.",
     link: "/solucoes-municipios"
   }];
-  return <section id="solucoes" className="py-12 md:py-20 bg-white">
+  return <section id="solucoes" className="pt-12 md:pt-20 pb-8 md:pb-10 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-10 md:mb-16`}>
           <h2 className="section-title">
