@@ -9,7 +9,7 @@ const Hero = () => {
   const { ref: buttonsRef, isVisible: buttonsVisible } = useScrollReveal();
 
   return (
-    <section className="pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28 gradient-bg text-white">
+    <section className="pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-20 gradient-bg text-white">
       <div className="container mx-auto px-4 text-center">
         <div
           ref={titleRef}
