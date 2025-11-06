@@ -4,9 +4,8 @@ import {
   BarChart2, 
   Clock, 
   FileQuestion, 
-  Puzzle, 
-  ShieldCheck, 
-  Lightbulb, 
+  Building2, 
+  Landmark, 
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -43,13 +42,13 @@ const Solutions = () => {
 
   const solutions = [
     {
-      icon: <Puzzle className="h-10 w-10 text-logge-light-blue" />,
+      icon: <Building2 className="h-10 w-10 text-logge-light-blue" />,
       title: "Soluções para a Minha Empresa",
       description: "Transforme sua empresa com soluções tecnológicas personalizadas que otimizam processos, aumentam a produtividade e impulsionam o crescimento do seu negócio.",
       link: "/solucoes-empresas"
     },
     {
-      icon: <ShieldCheck className="h-10 w-10 text-logge-light-blue" />,
+      icon: <Landmark className="h-10 w-10 text-logge-light-blue" />,
       title: "Soluções para o Meu Município",
       description: "Modernize a gestão pública com tecnologia que melhora os serviços aos cidadãos, aumenta a transparência e otimiza os recursos municipais.",
       link: "/solucoes-municipios"
