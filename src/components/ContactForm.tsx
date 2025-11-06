@@ -113,8 +113,8 @@ const ContactForm = () => {
                   <Mail className="h-5 w-5 text-logge-light-blue mr-3 mt-1" />
                   <div>
                     <p className="font-medium text-logge-gray-400 text-sm sm:text-base">E-mail</p>
-                    <a href="mailto:contato@loggetecnologia.com.br" className="text-logge-dark-blue hover:text-logge-light-blue transition-colors text-sm sm:text-base">
-                      contato@loggetecnologia.com.br
+                    <a href="mailto:contato@logge.tec.br" className="text-logge-dark-blue hover:text-logge-light-blue transition-colors text-sm sm:text-base">
+                      contato@logge.tec.br
                     </a>
                   </div>
                 </div>
