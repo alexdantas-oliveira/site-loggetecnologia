@@ -20,20 +20,20 @@ const Solutions = () => {
   } = useScrollReveal();
   const problems = [{
     icon: <AlertTriangle className="h-10 w-10 text-amber-500" />,
-    title: "Processos Ineficientes",
-    description: "Operações manuais, desorganizadas e lentas que geram custos excessivos e frustração."
+    title: "Consultoria em Tecnologia",
+    description: "Orientação estratégica para implementação de soluções tecnológicas alinhadas aos objetivos do seu negócio."
   }, {
     icon: <Clock className="h-10 w-10 text-amber-500" />,
-    title: "Tempo de Resposta Lento",
-    description: "Dificuldade para tomar decisões rápidas baseadas em dados concretos e atualizados."
+    title: "Desenvolvimento Sob Demanda",
+    description: "Criação de sistemas e aplicações personalizadas para atender necessidades específicas da sua organização."
   }, {
     icon: <FileQuestion className="h-10 w-10 text-amber-500" />,
-    title: "Dados Desorganizados",
-    description: "Informações críticas espalhadas em diferentes sistemas, sem integração e com difícil acesso."
+    title: "Automação de Processos",
+    description: "Otimização de operações através de automação inteligente, reduzindo custos e aumentando eficiência."
   }, {
     icon: <BarChart2 className="h-10 w-10 text-amber-500" />,
-    title: "Falta de Inovação",
-    description: "Dificuldade em implementar novas tecnologias e manter-se competitivo no mercado."
+    title: "Business Intelligence & Analytics",
+    description: "Transformação de dados em insights estratégicos para tomada de decisões baseadas em informações precisas."
   }];
   const solutions = [{
     icon: <Building2 className="h-10 w-10 text-logge-light-blue" />,
