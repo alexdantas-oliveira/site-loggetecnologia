@@ -53,7 +53,7 @@ const Solutions = () => {
             Nossos Serviços Técnicos
           </h2>
           <p className="section-subtitle">
-            Identificamos e transformamos os principais desafios enfrentados por empresas e órgãos públicos em oportunidades de inovação e crescimento.
+            Expertise completa em tecnologia para empresas e governos.
           </p>
         </div>
 
