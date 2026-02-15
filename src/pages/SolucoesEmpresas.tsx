@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail, Search, Cog, BarChart3, Code } from "lucide-react";
+import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Search, Cog, BarChart3, Code } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +14,7 @@ import {
 import { ContactFormBody } from "@/components/ContactFormBody";
 
 const SolucoesEmpresas = () => {
-  const [email, setEmail] = useState('');
+
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const {
@@ -34,10 +33,7 @@ const SolucoesEmpresas = () => {
     ref: servicesRef,
     isVisible: servicesVisible
   } = useScrollReveal();
-  const {
-    ref: signupRef,
-    isVisible: signupVisible
-  } = useScrollReveal();
+
 
   const benefits = [{
     icon: <TrendingUp className="h-12 w-12 text-logge-light-blue" />,
@@ -74,12 +70,7 @@ const SolucoesEmpresas = () => {
     icon: <Code className="h-12 w-12 text-logge-light-blue mb-4" />
   }];
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Aqui você implementaria a lógica de envio do email
-    console.log('Email cadastrado:', email);
-    setEmail('');
-  };
+
 
   const openContactModal = () => setIsContactOpen(true);
 
@@ -167,31 +158,7 @@ const SolucoesEmpresas = () => {
           </div>
         </section>
 
-        {/* Email Signup Section */}
-        <section ref={signupRef} id="signup" className="py-12 md:py-20 bg-logge-gray-100">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className={`scroll-reveal ${signupVisible ? 'revealed' : ''} max-w-2xl mx-auto text-center`}>
-              <Mail className="h-16 w-16 text-logge-light-blue mx-auto mb-6" />
-              <h2 className="section-title mb-4">
-                Receba Conteúdo Exclusivo
-              </h2>
-              <p className="section-subtitle mb-8">
-                Cadastre-se para receber dicas, estudos de caso e novidades sobre transformação digital empresarial.
-              </p>
 
-              <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                <Input type="email" placeholder="Seu e-mail empresarial" value={email} onChange={e => setEmail(e.target.value)} required className="flex-1 py-3 px-4 text-base" />
-                <Button type="submit" className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 text-base shadow-medium hover:shadow-strong whitespace-nowrap">
-                  Cadastrar
-                </Button>
-              </form>
-
-              <p className="text-sm text-logge-gray-300 mt-4">
-                Ao se cadastrar, você concorda em receber nossos e-mails. Você pode cancelar a qualquer momento.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

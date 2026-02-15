@@ -1,20 +1,22 @@
 
 import { Button } from "@/components/ui/button";
-import { 
-  Facebook, 
-  Instagram, 
-  Linkedin, 
-  Twitter, 
-  ChevronRight 
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin
 } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+
 
   return (
     <footer className="bg-logge-dark-blue text-white">
-      <div className="container mx-auto py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div>
             <h3 className="text-xl font-bold mb-6">
               <span className="text-logge-light-blue">Logge</span> Tecnologia
@@ -23,29 +25,29 @@ const Footer = () => {
               Transformando desafios em soluções inovadoras e eficientes para empresas e governos.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
                 aria-label="Twitter"
               >
@@ -55,57 +57,42 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6">Links Rápidos</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#solucoes" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Soluções
-                </a>
-              </li>
-              <li>
-                <a href="#diferenciais" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Diferenciais
-                </a>
-              </li>
-              <li>
-                <a href="#contato" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
+            <h4 className="text-lg font-bold mb-6">Informações de Contato</h4>
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                <div className="flex items-start">
+                  <Mail className="h-5 w-5 text-logge-light-blue mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-300 text-sm">E-mail</p>
+                    <a href="mailto:contato@logge.tec.br" className="text-white hover:text-logge-light-blue transition-colors">
+                      contato@logge.tec.br
+                    </a>
+                  </div>
+                </div>
 
-          <div>
-            <h4 className="text-lg font-bold mb-6">Soluções</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Consultoria Tecnológica
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Desenvolvimento de Software
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Transformação Digital
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-2" />
-                  Business Intelligence
-                </a>
-              </li>
-            </ul>
+                <div className="flex items-start">
+                  <Phone className="h-5 w-5 text-logge-light-blue mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-medium text-gray-300 text-sm">Telefone</p>
+                    <a href="tel:+5586998056525" className="text-white hover:text-logge-light-blue transition-colors">
+                      (86) 99805-6525
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 text-logge-light-blue mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-medium text-gray-300 text-sm">Endereço</p>
+                  <p className="text-white">
+                    Rua David Caldas, 1392
+                    Bairro Vermelha, Centro Sul
+                    Teresina - PI
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -126,9 +113,9 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        
+
         <div className="border-t border-white/10 mt-12 pt-6 text-center text-gray-400">
-          <p>© {currentYear} Logge Tecnologia. Todos os direitos reservados.</p>
+          <p>© 2025 Logge Tecnologia. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

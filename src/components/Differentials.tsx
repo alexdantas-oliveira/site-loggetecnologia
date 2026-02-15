@@ -43,37 +43,37 @@ const Differentials = () => {
     icon: <LineChart size={24} />,
     label: "Business Intelligence"
   }];
-  return <section id="diferenciais" className="pt-4 md:pt-6 pb-20 bg-gradient-to-b from-white to-logge-gray-100">
-      <div className="container mx-auto">
-        <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-16`}>
-          <h2 className="section-title">Nossos Diferenciais</h2>
-          <p className="section-subtitle">O que nos torna a escolha certa para transformar os seus desafios em soluções inovadoras e eficientes.</p>
+  return <section id="diferenciais" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-white">
+    <div className="container mx-auto">
+      <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-16`}>
+        <h2 className="section-title">Nossos Diferenciais</h2>
+        <p className="section-subtitle">O que nos torna a escolha certa para transformar os seus desafios em soluções inovadoras e eficientes.</p>
+      </div>
+
+      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {differentials.map((differential, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${cardsVisible ? 'revealed' : ''} bg-white px-4 py-8 rounded-lg shadow-soft card-hover text-center h-full flex flex-col`}>
+          <div className="flex justify-center transition-transform duration-300 hover:scale-110 mb-4">
+            {differential.icon}
+          </div>
+          <h3 className="text-lg sm:text-xl font-bold mb-3 text-logge-dark-blue whitespace-nowrap">{differential.title}</h3>
+          <p className="text-logge-gray-300 flex-grow">{differential.description}</p>
+        </div>)}
+      </div>
+
+      <div ref={techRef} className={`scroll-reveal ${techVisible ? 'revealed' : ''} gradient-bg rounded-2xl p-10 text-white shadow-medium`}>
+        <div className="text-center mb-10">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">Tecnologias em que Somos Especialistas</h3>
+          <p className="text-lg max-w-3xl mx-auto leading-relaxed">Utilizamos as tecnologias mais avançadas para criar soluções robustas e escaláveis para sua empresa ou município.</p>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {differentials.map((differential, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${cardsVisible ? 'revealed' : ''} bg-white p-8 rounded-lg shadow-soft card-hover text-center`}>
-              <div className="flex justify-center transition-transform duration-300 hover:scale-110">
-                {differential.icon}
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{differential.title}</h3>
-              <p className="text-logge-gray-300">{differential.description}</p>
-            </div>)}
-        </div>
-
-        <div ref={techRef} className={`scroll-reveal ${techVisible ? 'revealed' : ''} gradient-bg rounded-2xl p-10 text-white shadow-medium`}>
-          <div className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">Tecnologias em que Somos Especialistas</h3>
-            <p className="text-lg max-w-3xl mx-auto leading-relaxed">Utilizamos as tecnologias mais avançadas para criar soluções robustas e escaláveis para sua empresa ou município.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:-translate-y-1">
-                <div className="mr-3 text-white transition-transform duration-300 hover:scale-110">{tech.icon}</div>
-                <span className="font-medium">{tech.label}</span>
-              </div>)}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {technologies.map((tech, index) => <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 flex items-center transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:-translate-y-1">
+            <div className="mr-3 text-white transition-transform duration-300 hover:scale-110">{tech.icon}</div>
+            <span className="font-bold">{tech.label}</span>
+          </div>)}
         </div>
       </div>
-    </section>;
+    </div>
+  </section>;
 };
 export default Differentials;
