@@ -48,7 +48,7 @@ const Solutions = () => {
   }];
   return <section id="solucoes" className="pt-16 md:pt-24 pb-0 bg-white">
     <div className="container mx-auto px-4 sm:px-6">
-      <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-10 md:mb-16`}>
+      <div id="nossos-servicos" ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-10 md:mb-16 scroll-mt-24`}>
         <h2 className="section-title">
           Nossos Serviços Técnicos
         </h2>

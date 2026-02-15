@@ -23,14 +23,22 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleContactAction = (e: React.MouseEvent) => {
-    if (onContactClick) {
-      e.preventDefault();
-      onContactClick();
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      // Pequeno delay para garantir que o menu mobile feche antes (se estiver aberto)
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
     }
+    setIsMenuOpen(false);
   };
+
+
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 shadow-sm ${isScrolled ? 'py-2' : 'py-4'}`}>
@@ -50,18 +58,26 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
-          <a href="/#solucoes" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
-            Soluções
-          </a>
-          <a href="/#diferenciais" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
-            Diferenciais
+          <a
+            href="#solucoes"
+            className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base"
+            onClick={(e) => handleScrollToSection(e, 'nossos-servicos')}
+          >
+            Serviços
           </a>
           <a
-            href="/#contato"
+            href="#transformamos"
             className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base"
-            onClick={handleContactAction}
+            onClick={(e) => handleScrollToSection(e, 'transformamos')}
           >
-            Contato
+            Soluções
+          </a>
+          <a
+            href="#diferenciais"
+            className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base"
+            onClick={(e) => handleScrollToSection(e, 'nossos-diferenciais')}
+          >
+            Diferenciais
           </a>
           <Button
             className="btn-primary text-sm lg:text-base"
@@ -95,31 +111,25 @@ const Navbar = ({ onContactClick }: NavbarProps) => {
         <div className="fixed inset-0 bg-white z-40 pt-20">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-6">
             <a
-              href="/#solucoes"
+              href="#solucoes"
               className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScrollToSection(e, 'nossos-servicos')}
+            >
+              Serviços
+            </a>
+            <a
+              href="#transformamos"
+              className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
+              onClick={(e) => handleScrollToSection(e, 'transformamos')}
             >
               Soluções
             </a>
             <a
-              href="/#diferenciais"
+              href="#diferenciais"
               className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => handleScrollToSection(e, 'nossos-diferenciais')}
             >
               Diferenciais
-            </a>
-            <a
-              href="/#contato"
-              className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
-              onClick={(e) => {
-                setIsMenuOpen(false);
-                if (onContactClick) {
-                  e.preventDefault();
-                  onContactClick();
-                }
-              }}
-            >
-              Contato
             </a>
             <Button
               className="btn-primary w-full mt-4"

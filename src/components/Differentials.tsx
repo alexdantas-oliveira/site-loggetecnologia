@@ -45,7 +45,7 @@ const Differentials = () => {
   }];
   return <section id="diferenciais" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-white">
     <div className="container mx-auto">
-      <div ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-16`}>
+      <div id="nossos-diferenciais" ref={titleRef} className={`scroll-reveal ${titleVisible ? 'revealed' : ''} text-center mb-16 scroll-mt-24`}>
         <h2 className="section-title">Nossos Diferenciais</h2>
         <p className="section-subtitle">O que nos torna a escolha certa para transformar os seus desafios em soluções inovadoras e eficientes.</p>
       </div>

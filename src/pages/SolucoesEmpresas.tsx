@@ -80,7 +80,7 @@ const SolucoesEmpresas = () => {
 
       <main>
         {/* Hero Section */}
-        <section ref={heroRef} className={`scroll-reveal ${heroVisible ? 'revealed' : ''} pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-logge-light-blue to-logge-dark-blue text-white`}>
+        <section ref={heroRef} className={`scroll-reveal ${heroVisible ? 'revealed' : ''} pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-logge-light-blue to-logge-dark-blue text-white`}>
           <div className="container mx-auto px-4 sm:px-6 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
               Soluções Tecnológicas para <span className="text-white/90">Empresas</span>
@@ -99,7 +99,7 @@ const SolucoesEmpresas = () => {
         </section>
 
         {/* Benefits Section */}
-        <section ref={benefitsRef} className="py-12 md:py-20 bg-white">
+        <section ref={benefitsRef} className="pt-16 md:pt-24 pb-8 md:pb-12 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="section-title">
@@ -125,14 +125,14 @@ const SolucoesEmpresas = () => {
         </section>
 
         {/* Services Grid Section */}
-        <section ref={servicesRef} className="py-12 md:py-20 bg-white">
+        <section ref={servicesRef} className="pt-8 md:pt-12 pb-16 md:pb-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="section-title">
                 Nossas Soluções Empresariais
               </h2>
               <p className="section-subtitle">
-                Oferecemos um portfólio completo de soluções tecnológicas para impulsionar seu negócio.
+                Oferecemos um portfólio completo de soluções tecnológicas para impulsionar o seu negócio.
               </p>
             </div>
 
