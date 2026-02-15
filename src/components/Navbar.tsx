@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoLogge from "@/assets/logo-logge-tecnologia.png";
 
-const Navbar = () => {
+interface NavbarProps {
+  onContactClick?: () => void;
+}
+
+const Navbar = ({ onContactClick }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,6 +25,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleContactAction = (e: React.MouseEvent) => {
+    if (onContactClick) {
+      e.preventDefault();
+      onContactClick();
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-all duration-300 shadow-sm ${isScrolled ? 'py-2' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -29,9 +40,9 @@ const Navbar = () => {
             <h1 className="text-xl md:text-2xl font-bold text-logge-dark-blue">
               <span className="text-logge-light-blue">Logge</span> Tecnologia
             </h1>
-            <img 
-              src={logoLogge} 
-              alt="Logo Logge Tecnologia" 
+            <img
+              src={logoLogge}
+              alt="Logo Logge Tecnologia"
               className="h-8 md:h-10 w-auto"
             />
           </a>
@@ -39,26 +50,39 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
-          <a href="#solucoes" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
+          <a href="/#solucoes" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
             Soluções
           </a>
-          <a href="#diferenciais" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
+          <a href="/#diferenciais" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
             Diferenciais
           </a>
-          <a href="#contato" className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base">
+          <a
+            href="/#contato"
+            className="text-logge-gray-400 hover:text-logge-dark-blue font-medium transition-colors text-sm lg:text-base"
+            onClick={handleContactAction}
+          >
             Contato
           </a>
-          <Button className="btn-primary text-sm lg:text-base" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button
+            className="btn-primary text-sm lg:text-base"
+            onClick={(e) => {
+              if (onContactClick) {
+                onContactClick();
+              } else {
+                document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             Fale Conosco
           </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="md:hidden">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-logge-dark-blue"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,32 +94,42 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-40 pt-20">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-6">
-            <a 
-              href="#solucoes" 
+            <a
+              href="/#solucoes"
               className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Soluções
             </a>
-            <a 
-              href="#diferenciais"
+            <a
+              href="/#diferenciais"
               className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Diferenciais
             </a>
-            <a 
-              href="#contato"
+            <a
+              href="/#contato"
               className="text-logge-dark-blue text-xl font-medium py-2 border-b border-gray-100"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                setIsMenuOpen(false);
+                if (onContactClick) {
+                  e.preventDefault();
+                  onContactClick();
+                }
+              }}
             >
               Contato
             </a>
-            <Button 
-              className="btn-primary w-full mt-4" 
+            <Button
+              className="btn-primary w-full mt-4"
               onClick={() => {
                 setIsMenuOpen(false);
-                document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+                if (onContactClick) {
+                  onContactClick();
+                } else {
+                  document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+                }
               }}
             >
               Fale Conosco
@@ -106,5 +140,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
+

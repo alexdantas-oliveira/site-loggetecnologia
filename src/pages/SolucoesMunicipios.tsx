@@ -5,8 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Building2, Users, TrendingUp, Target, CheckCircle, ArrowRight, Mail, GraduationCap, Heart, HandHeart, Vote } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ContactFormBody } from "@/components/ContactFormBody";
+
 const SolucoesMunicipios = () => {
   const [email, setEmail] = useState('');
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   const {
     ref: heroRef,
     isVisible: heroVisible
@@ -27,6 +38,7 @@ const SolucoesMunicipios = () => {
     ref: signupRef,
     isVisible: signupVisible
   } = useScrollReveal();
+
   const benefits = [{
     icon: <TrendingUp className="h-12 w-12 text-logge-light-blue" />,
     title: "Eficiência na Gestão Pública",
@@ -61,15 +73,20 @@ const SolucoesMunicipios = () => {
     icon: <Users className="h-12 w-12 text-logge-light-blue mb-4" />,
     features: ["Portal de Votação", "Cadastro de Propostas", "Mapeamento de Demandas", "Dashboard Transparência", "Gestão de Assembleias", "Sistema de Ranking", "Relatórios Participativos", "Notificações Cidadãos", "Controle de Execução", "Analytics Participação"]
   }];
+
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Aqui você implementaria a lógica de envio do email
     console.log('Email cadastrado:', email);
     setEmail('');
   };
-  return <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
+
+  const openContactModal = () => setIsContactOpen(true);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar onContactClick={openContactModal} />
+
       <main>
         {/* Hero Section */}
         <section ref={heroRef} className={`scroll-reveal ${heroVisible ? 'revealed' : ''} pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-logge-light-blue to-logge-dark-blue text-white`}>
@@ -80,9 +97,10 @@ const SolucoesMunicipios = () => {
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-white/90">
               Modernize a gestão pública com soluções tecnológicas que promovem eficiência, transparência e aproximam o governo dos cidadãos.
             </p>
-            <Button className="bg-white text-logge-dark-blue hover:bg-white/90 hover:scale-105 font-semibold py-4 px-8 rounded-md transition-all duration-300 text-lg shadow-medium hover:shadow-strong" onClick={() => document.getElementById('contato')?.scrollIntoView({
-            behavior: 'smooth'
-          })}>
+            <Button
+              className="bg-white text-logge-dark-blue hover:bg-white/90 hover:scale-105 font-semibold py-4 px-8 rounded-md transition-all duration-300 text-lg shadow-medium hover:shadow-strong"
+              onClick={openContactModal}
+            >
               Solicitar Consultoria Gratuita
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -102,19 +120,18 @@ const SolucoesMunicipios = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${benefitsVisible ? 'revealed' : ''} text-center p-6 rounded-lg card-hover-subtle`}>
+              {benefits.map((benefit, index) => (
+                <div key={index} className={`scroll-reveal scroll-reveal-stagger ${benefitsVisible ? 'revealed' : ''} text-center p-6 rounded-lg card-hover-subtle`}>
                   <div className="mb-4 flex justify-center">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{benefit.title}</h3>
                   <p className="text-logge-gray-300 leading-relaxed">{benefit.description}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        
 
         {/* Services Grid Section */}
         <section ref={servicesRef} className="py-12 md:py-20 bg-white">
@@ -129,19 +146,23 @@ const SolucoesMunicipios = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => <div key={index} className={`scroll-reveal scroll-reveal-stagger ${servicesVisible ? 'revealed' : ''} bg-white p-6 rounded-lg shadow-soft border border-gray-100 card-hover h-full flex flex-col`}>
+              {services.map((service, index) => (
+                <div key={index} className={`scroll-reveal scroll-reveal-stagger ${servicesVisible ? 'revealed' : ''} bg-white p-6 rounded-lg shadow-soft border border-gray-100 card-hover h-full flex flex-col`}>
                   <div className="mb-4">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-logge-dark-blue">{service.title}</h3>
                   <p className="text-logge-gray-300 mb-4 flex-grow">{service.description}</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm text-logge-gray-400">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-logge-gray-400">
                         <CheckCircle className="h-4 w-4 text-logge-light-blue mr-2 flex-shrink-0" />
                         {feature}
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -157,14 +178,14 @@ const SolucoesMunicipios = () => {
               <p className="section-subtitle mb-8">
                 Cadastre-se para receber dicas, estudos de caso e novidades sobre modernização da gestão municipal.
               </p>
-              
+
               <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                 <Input type="email" placeholder="Seu e-mail institucional" value={email} onChange={e => setEmail(e.target.value)} required className="flex-1 py-3 px-4 text-base" />
                 <Button type="submit" className="bg-logge-light-blue hover:bg-logge-dark-blue hover:scale-105 text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 text-base shadow-medium hover:shadow-strong whitespace-nowrap">
                   Cadastrar
                 </Button>
               </form>
-              
+
               <p className="text-sm text-logge-gray-300 mt-4">
                 Ao se cadastrar, você concorda em receber nossos e-mails. Você pode cancelar a qualquer momento.
               </p>
@@ -172,8 +193,23 @@ const SolucoesMunicipios = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
-    </div>;
+
+      <Dialog open={isContactOpen} onOpenChange={setIsContactOpen}>
+        <DialogContent className="sm:max-w-[900px] w-[95vw] max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-logge-dark-blue text-center">Entre em Contato</DialogTitle>
+            <DialogDescription className="text-center">
+              Preencha o formulário abaixo e entraremos em contato o mais breve possível.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <ContactFormBody onSuccess={() => setIsContactOpen(false)} />
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
 };
 export default SolucoesMunicipios;
